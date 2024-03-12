@@ -1,0 +1,8 @@
+{
+  "name": "code-collection-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/code-collection-e2e/src",
+  "targets": {},
+  "implicitDependencies": ["code-collection"]
+}
