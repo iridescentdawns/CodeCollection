@@ -1,13 +1,14 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
 import React from 'react';
-
-import NxWelcome from './nx-welcome';
+import { Sidebar } from './components/Sidebar/sidebar';
+import { Router } from './router';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="code-collection" />
+      <Sidebar />
+      <Router />
     </div>
   );
 }
