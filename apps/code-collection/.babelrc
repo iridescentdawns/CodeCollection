@@ -3,9 +3,11 @@
     [
       "@nx/react/babel",
       {
-        "runtime": "automatic"
+        "runtime": "automatic",
+        "useBuiltIns": "usage"
       }
-    ]
+    ],
+    "@emotion/babel-preset-css-prop"
   ],
-  "plugins": []
+  "plugins": ["babel-plugin-twin", "babel-plugin-macros"]
 }

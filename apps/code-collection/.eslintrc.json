@@ -1,17 +1,61 @@
 {
-  "extends": ["plugin:@nx/react", "../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*"],
+  "root": true,
+  "extends": ["airbnb", "airbnb-typescript", "airbnb/hooks", "plugin:prettier/recommended"],
+  "ignorePatterns": ["**/*"],
+  "plugins": ["prettier", "@nx", "simple-import-sort"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {}
+      "rules": {
+        "class-methods-use-this": "off",
+        "import/no-extraneous-dependencies": "off",
+        "no-param-reassign": ["error", { "props": false }],
+        "react/no-unknown-property": [
+          "error",
+          {
+            "ignore": ["tw", "css"]
+          }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ],
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": "arrow-function"
+          }
+        ],
+        "import/prefer-default-export": "off",
+        "lines-between-class-members": "off"
+      }
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "rules": {}
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-explicit-any": ["error", { "ignoreRestArgs": true }],
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
+        "simple-import-sort/exports": "error",
+        "simple-import-sort/imports": "error",
+        "@typescript-eslint/lines-between-class-members": "off"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
       "rules": {}
     }
   ]
