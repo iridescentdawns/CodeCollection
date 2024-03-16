@@ -1,0 +1,19 @@
+{
+  "name": "review-carousel",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/review-carousel/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/review-carousel",
+        "main": "libs/review-carousel/src/index.ts",
+        "tsConfig": "libs/review-carousel/tsconfig.lib.json",
+        "assets": ["libs/review-carousel/*.md"]
+      }
+    }
+  },
+  "tags": []
+}
