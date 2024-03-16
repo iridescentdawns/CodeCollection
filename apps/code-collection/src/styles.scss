@@ -3,11 +3,9 @@
 /* You can add global styles to this file, and also import other style files */
 html, body, #root, #root > div {
   @apply h-full;
-  @apply bg-slate-950;
-  height: 100%;
 }
 
 #root > div {
-  display: flex;
+  @apply flex;
 }
 
