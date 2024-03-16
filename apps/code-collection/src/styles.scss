@@ -1,7 +1,11 @@
 @import './app/components/Sidebar/sidebar.styles';
 
 /* You can add global styles to this file, and also import other style files */
-html, body, #root {
+html, body, #root, #root > div {
   height: 100%;
+}
+
+#root > div {
+  display: flex;
 }
 
