@@ -1,10 +1,13 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "jsx": "react",
     "outDir": "../../dist/out-tsc",
     "declaration": true,
-    "types": ["node"]
+    "types": ["node"],
+    "esModuleInterop": true,
+    "composite": true,
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/lib/review-carousel.tsx"],
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
 }

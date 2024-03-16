@@ -1,3 +1,4 @@
+import { ReviewCarousel } from '@org/review-carousel';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { AppLayout } from './AppLayout';
 
@@ -8,6 +9,10 @@ const routesConfig = [
       {
         path: '/',
         element: <div>Home</div>,
+      },
+      {
+        path: 'reviews',
+        element: <ReviewCarousel />,
       },
     ],
   },
